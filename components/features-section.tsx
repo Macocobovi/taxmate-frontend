@@ -1,11 +1,11 @@
 import { Shield, Lock, RefreshCw, Users, FileText, TrendingUp } from "lucide-react"
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
-  <div className="group relative overflow-hidden rounded-2xl border border-border/50 bg-card/30 backdrop-blur-xl p-8 flex flex-col gap-4 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1">
+  <div className="group relative overflow-hidden rounded-2xl glass glass-hover p-8 flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1">
     <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     <div className="absolute -top-24 -right-24 w-48 h-48 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-    <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+    <div className="relative w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border border-primary/30 flex items-center justify-center group-hover:scale-110 group-hover:border-primary/50 transition-all duration-300">
       <Icon className="w-7 h-7 text-primary" />
     </div>
     <h3 className="relative text-foreground text-xl font-bold">{title}</h3>

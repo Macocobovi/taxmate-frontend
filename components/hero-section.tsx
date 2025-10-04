@@ -8,25 +8,27 @@ import Link from "next/link"
 export function HeroSection() {
   return (
     <section className="flex flex-col items-center text-center relative mx-auto px-4 pt-6 pb-32">
-      {/* Animated background grid */}
-      <div className="absolute inset-0 z-0 opacity-20">
+      <div className="absolute inset-0 z-0 opacity-10">
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `
-            linear-gradient(to right, hsl(var(--primary) / 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, hsl(var(--primary) / 0.1) 1px, transparent 1px)
+            linear-gradient(to right, hsl(var(--primary) / 0.15) 1px, transparent 1px),
+            linear-gradient(to bottom, hsl(var(--primary) / 0.15) 1px, transparent 1px)
           `,
             backgroundSize: "4rem 4rem",
           }}
         />
       </div>
 
-      {/* Gradient orbs */}
-      <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-30 animate-pulse" />
+      <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl opacity-40 animate-pulse" />
       <div
-        className="absolute top-40 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-30 animate-pulse"
+        className="absolute top-40 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl opacity-40 animate-pulse"
         style={{ animationDelay: "1s" }}
+      />
+      <div
+        className="absolute bottom-20 left-1/3 w-80 h-80 bg-accent/15 rounded-full blur-3xl opacity-30 animate-pulse"
+        style={{ animationDelay: "2s" }}
       />
 
       {/* Header */}
@@ -42,10 +44,7 @@ export function HeroSection() {
         </div>
 
         <h1 className="text-foreground text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-balance">
-          Reinventing Tax Collection with{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-accent">
-            Blockchain Transparency
-          </span>
+          Reinventing Tax Collection with <span className="gradient-text">Blockchain Transparency</span>
         </h1>
 
         <p className="text-muted-foreground text-lg md:text-xl font-body leading-relaxed max-w-2xl mx-auto text-pretty">
@@ -55,14 +54,14 @@ export function HeroSection() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
           <Link href="/auth/signup">
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 rounded-lg font-semibold text-lg shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30 hover:scale-105">
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 rounded-lg font-semibold text-lg shadow-lg shadow-primary/30 transition-all hover:shadow-2xl hover:shadow-primary/40 hover:scale-105">
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
           <Button
             variant="outline"
-            className="border-border hover:bg-card px-8 py-6 rounded-lg font-semibold text-lg bg-transparent hover:border-primary/50 transition-all"
+            className="glass glass-hover px-8 py-6 rounded-lg font-semibold text-lg transition-all bg-transparent"
             onClick={() => {
               document.getElementById("features-section")?.scrollIntoView({ behavior: "smooth" })
             }}
@@ -97,11 +96,11 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 mt-16 w-full max-w-5xl px-4">
-        <div className="relative rounded-xl overflow-hidden border border-border shadow-2xl shadow-primary/10 bg-card">
+        <div className="relative rounded-xl overflow-hidden glass shadow-2xl shadow-primary/10">
           <div className="p-8">
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 space-y-3">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <div className="glass glass-hover rounded-lg p-6 space-y-3 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -115,8 +114,8 @@ export function HeroSection() {
                 <p className="text-sm text-muted-foreground">Create your taxpayer account and get your TIN</p>
               </div>
 
-              <div className="bg-secondary/5 border border-secondary/20 rounded-lg p-6 space-y-3">
-                <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center">
+              <div className="glass glass-hover rounded-lg p-6 space-y-3 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-secondary/20 border border-secondary/30 flex items-center justify-center">
                   <svg className="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
@@ -130,8 +129,8 @@ export function HeroSection() {
                 <p className="text-sm text-muted-foreground">Make secure payments tracked on blockchain</p>
               </div>
 
-              <div className="bg-accent/5 border border-accent/20 rounded-lg p-6 space-y-3">
-                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+              <div className="glass glass-hover rounded-lg p-6 space-y-3 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center">
                   <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
